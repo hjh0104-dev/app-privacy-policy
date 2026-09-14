@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>觅商猿 App 隐私政策</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    background: #f5f6f8;
+    color: #1f2937;
+    line-height: 1.8;
+    padding: 20px 16px 60px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 14px;
+    padding: 32px 28px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .updated {
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+  h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin: 28px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  p {
+    margin: 10px 0;
+    font-size: 14.5px;
+    color: #374151;
+  }
+  .contact {
+    margin-top: 24px;
+    padding: 16px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #334155;
+  }
+  @media (max-width: 480px) {
+    body { padding: 12px 10px 40px; }
+    .wrap { padding: 24px 18px; border-radius: 10px; }
+    h1 { font-size: 20px; }
+    h2 { font-size: 15px; }
+    p { font-size: 14px; line-height: 1.75; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>觅商猿 App 隐私政策</h1>
+<p class="updated">最后更新日期：2026 年 9 月 14 日</p>
+
+<p>我们深知个人信息对您的重要性，将严格依照《中华人民共和国个人信息保护法》及相关法律法规保护您的个人信息。本隐私政策旨在向您说明我们在您使用「觅商猿」App（以下简称"本应用"）过程中如何收集、使用、存储和保护您的个人信息，以及您所享有的权利。</p>
+
+<h2>一、我们收集的信息</h2>
+
+<p>1. <strong>设备标识信息</strong><br>
+当您首次启动本应用时，我们会生成一个随机设备唯一标识（UUID）并存储在 iOS 钥匙串中（卸载重装后仍保留）。该标识仅用于识别设备、发放会员权益、管理搜索配额，不包含您的姓名、手机号等真实身份信息。</p>
+
+<p>2. <strong>搜索记录信息</strong><br>
+当您使用搜索功能时，我们会记录您的搜索关键词、目标国家、搜索时间及返回的结果数量，用于功能统计与配额管理。该等记录与设备标识关联，不包含您的真实身份。</p>
+
+<p>3. <strong>内购交易信息</strong><br>
+当您购买 Pro 版或 Ultra 版时，我们通过苹果 App Store 完成交易。我们会记录交易 ID、产品 ID 及交易时间，用于验证购买有效性和发放权益。我们不收集您的信用卡号、账单地址等支付信息，该等信息由苹果公司直接处理。</p>
+
+<p>4. <strong>语音输入信息</strong><br>
+当您使用语音输入功能时，本应用会调用 iOS 系统的语音识别能力（SFSpeechRecognizer）将您的语音转换为文字。语音识别过程在您的设备本地完成，我们不会收集、上传或存储您的语音数据或识别结果（识别结果仅用于即时填充搜索关键词，不离开您的设备）。</p>
+
+<p>5. <strong>日志与诊断信息</strong><br>
+为保障服务稳定运行，我们的服务器可能自动记录请求时间、设备标识及错误日志，用于故障排查与安全防护。</p>
+
+<h2>二、我们如何使用信息</h2>
+<p>1. 提供、维护和改进本应用的核心功能；<br>
+2. 验证会员权益、管理搜索配额；<br>
+3. 排查服务故障、防范欺诈与滥用行为；<br>
+4. 根据您的关键词及目标国家自动翻译生成多语言搜索词，并从 Google、Yandex 等搜索引擎获取企业公开信息；<br>
+5. 从企业官网公开页面提取邮箱、电话等联系方式，不破解登录或绕过权限限制；<br>
+6. 在获得您同意的情况下，用于其他合理用途。</p>
+
+<h2>三、第三方 SDK 与 API 说明</h2>
+
+<p>为实现本应用的功能，我们接入了以下第三方服务，各服务的数据处理情况如下：</p>
+
+<p>1. <strong>Apple DeviceCheck</strong><br>
+用途：用于识别重复设备、防止免费额度被滥用，保障服务公平。<br>
+数据处理：由苹果公司在其服务器端完成，我们仅获取校验结果，不收集设备硬件标识。</p>
+
+<p>2. <strong>Apple StoreKit（内购）</strong><br>
+用途：处理 Pro 版与 Ultra 版的购买与权益发放。<br>
+数据处理：交易由苹果公司处理，我们仅获取交易凭证用于验证。</p>
+
+<p>3. <strong>Serper API（Google 搜索服务）</strong><br>
+用途：根据您输入的关键词从 Google 搜索获取企业公开信息。<br>
+数据处理：您的搜索关键词会被发送至 Serper 以获取搜索结果。请参阅 Serper 的隐私政策了解其数据处理方式。</p>
+
+<p>4. <strong>SerpApi（多引擎搜索 + 翻译服务）</strong><br>
+用途：作为 Serper 的后备通道，从 Google、Yandex 搜索获取企业公开信息；同时用于将搜索关键词翻译为目标国家本地语言以提升搜索精准度。<br>
+数据处理：您的搜索关键词会被发送至 SerpApi（可能被 SerpApi 进一步翻译为目标语言）以获取搜索结果。请参阅 SerpApi 的隐私政策了解其数据处理方式。</p>
+
+<p>5. <strong>Google 翻译（公开端点）</strong><br>
+用途：当 SerpApi 翻译通道不可用时，兜底调用 Google 公开翻译端点将搜索关键词翻译为目标国家本地语言。<br>
+数据处理：您的搜索关键词会被发送至 Google 公开翻译端点。请参阅 Google 的隐私政策了解其数据处理方式。</p>
+
+<p>6. <strong>iOS 系统语音识别（SFSpeechRecognizer）</strong><br>
+用途：将您的语音转换为文字用于搜索关键词输入。<br>
+数据处理：由 iOS 系统在本地处理，语音数据不上传至我们的服务器。</p>
+
+<h2>四、系统权限说明</h2>
+
+<p>1. <strong>麦克风权限</strong><br>
+用途：当您点击搜索框旁的麦克风图标进行语音输入时，需要麦克风权限录制语音。<br>
+是否收集信息：否。语音数据仅在设备本地用于语音识别，不会被我们收集、上传或存储。<br>
+您可以随时在 iOS「设置 - 觅商猿 - 麦克风」中关闭该权限，关闭后语音输入功能将不可用，但不影响其他功能。</p>
+
+<p>2. <strong>语音识别权限</strong><br>
+用途：调用 iOS 系统语音识别能力将语音转换为文字。<br>
+是否收集信息：否。识别过程在本地完成。</p>
+
+<p>本应用不申请相机、相册、通讯录、定位等其他系统权限。</p>
+
+<h2>五、信息存储与安全</h2>
+<p>1. 我们采取合理的技术措施（包括数据加密传输、访问控制等）保护您的个人信息安全，防止信息泄露、损毁或丢失。<br>
+2. 您的个人信息存储于我们部署在 Railway 云平台上的后端服务器数据库中，仅授权人员可访问。<br>
+3. 我们仅在实现本政策所述目的所必需的最短时间内保留您的个人信息，超出保留期限后将删除或匿名化处理。</p>
+
+<h2>六、信息共享与转让</h2>
+<p>除以下情形外，我们不会向第三方共享您的个人信息：<br>
+1. 获得您的明确同意；<br>
+2. 为实现本政策所述功能所必需，且第三方承诺承担同等保密义务（如上述第三方 SDK）；<br>
+3. 法律法规要求或司法机关、行政机关依法要求提供；<br>
+4. 我们发生合并、收购等变更时，相关信息可能作为资产的一部分转移，我们将要求接收方继续受本政策约束。</p>
+
+<h2>七、您的权利</h2>
+<p>根据适用法律法规，您对您的个人信息享有以下权利：<br>
+1. 查阅、复制您的个人信息；<br>
+2. 更正不准确的个人信息；<br>
+3. 删除您的个人信息；<br>
+4. 撤回已给予的同意；<br>
+5. 注销账号或要求停止处理您的个人信息。</p>
+
+<p>如您需行使上述权利，请通过本政策末尾的联系方式与我们联系，我们将在核实您的身份后及时处理。</p>
+
+<h2>八、未成年人保护</h2>
+<p>本应用主要面向外贸从业者（成年人）。我们不会主动收集未成年人的个人信息。如您是未成年人，请在监护人指导下使用本应用。如我们发现在未获得监护人同意的情况下收集了未成年人信息，将及时删除。</p>
+
+<h2>九、本政策的更新</h2>
+<p>我们可能适时修订本隐私政策。修订后的政策将在应用内公布，重大变更将通过显著方式通知您。继续使用本应用即视为您接受修订后的政策。</p>
+
+<div class="contact">
+  <h2 style="margin-top:0;">十、联系我们</h2>
+  <p>如对本隐私政策有任何疑问、意见或建议，或需行使您的个人信息权利，请通过以下方式联系我们：<br>
+  邮箱：<a href="mailto:hjh19900104@126.com" style="color:#1e3a8a;text-decoration:none;">hjh19900104@126.com</a></p>
+  <p>我们将在收到您的请求后 15 个工作日内予以回复。</p>
+</div>
+
+</div>
+</body>
+</html>
