@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>拾段 · 技术支持</title>
+<!-- TODO: 将页面中 support@example.com 替换为你的真实客服邮箱后再部署 -->
+<style>
+  :root{
+    --primary:#10B981; --primary-dark:#059669; --primary-light:#6EE7B7;
+    --bg:#F9FAFB; --card:#FFFFFF; --text:#111827; --text-2:#6B7280; --text-3:#9CA3AF;
+    --line:#E5E7EB; --radius:16px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.75;font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px 64px;}
+  /* 顶部 */
+  header.hero{
+    background:linear-gradient(135deg,#34D399 0%,#10B981 55%,#059669 100%);
+    color:#fff;padding:56px 20px 64px;text-align:center;border-radius:0 0 28px 28px;
+  }
+  .logo{
+    width:72px;height:72px;border-radius:20px;background:rgba(255,255,255,.18);
+    display:flex;align-items:center;justify-content:center;margin:0 auto 16px;
+    font-size:34px;font-weight:700;backdrop-filter:blur(4px);
+    box-shadow:0 8px 24px rgba(5,150,105,.35);
+  }
+  header.hero h1{font-size:30px;font-weight:700;letter-spacing:2px;}
+  header.hero p.sub{margin-top:10px;font-size:15px;opacity:.92;}
+  .badges{margin-top:18px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;}
+  .badge{font-size:12.5px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);
+    padding:4px 12px;border-radius:999px;}
+  /* 区块 */
+  section{margin-top:36px;}
+  h2.title{font-size:20px;font-weight:700;display:flex;align-items:center;gap:8px;margin-bottom:16px;}
+  h2.title::before{content:"";width:5px;height:20px;border-radius:3px;background:var(--primary);}
+  .card{background:var(--card);border-radius:var(--radius);padding:20px;
+    box-shadow:0 2px 12px rgba(17,24,39,.05);border:1px solid #F1F2F4;}
+  .lead{color:var(--text-2);font-size:15.5px;}
+  /* 功能网格 */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+  .feat{background:var(--card);border:1px solid #F1F2F4;border-radius:14px;padding:16px;}
+  .feat .ic{width:38px;height:38px;border-radius:11px;background:#ECFDF5;color:var(--primary-dark);
+    display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:10px;font-weight:700;}
+  .feat h3{font-size:15.5px;font-weight:650;margin-bottom:4px;}
+  .feat p{font-size:13px;color:var(--text-2);line-height:1.6;}
+  /* 步骤 */
+  ol.steps{counter-reset:s;list-style:none;}
+  ol.steps li{counter-increment:s;position:relative;padding:10px 0 10px 42px;border-bottom:1px solid #F3F4F6;font-size:15px;}
+  ol.steps li:last-child{border-bottom:none;}
+  ol.steps li::before{content:counter(s);position:absolute;left:0;top:11px;width:26px;height:26px;border-radius:50%;
+    background:var(--primary);color:#fff;font-size:13.5px;font-weight:650;display:flex;align-items:center;justify-content:center;}
+  /* FAQ */
+  details{background:var(--card);border:1px solid #F1F2F4;border-radius:12px;margin-bottom:10px;overflow:hidden;}
+  details summary{cursor:pointer;list-style:none;padding:15px 16px;font-weight:600;font-size:15px;
+    display:flex;justify-content:space-between;align-items:center;gap:12px;}
+  details summary::-webkit-details-marker{display:none;}
+  details summary::after{content:"+";font-size:20px;color:var(--primary);font-weight:400;transition:transform .2s;flex-shrink:0;}
+  details[open] summary::after{transform:rotate(45deg);}
+  details .ans{padding:0 16px 16px;color:var(--text-2);font-size:14.5px;}
+  details .ans strong{color:var(--text);}
+  /* 联系 */
+  .contact{text-align:center;}
+  .mail-btn{display:inline-block;margin-top:14px;background:var(--primary);color:#fff;text-decoration:none;
+    padding:13px 30px;border-radius:12px;font-weight:650;font-size:15.5px;box-shadow:0 6px 18px rgba(16,185,129,.32);}
+  .mail-btn:active{transform:translateY(1px);}
+  .hint{margin-top:12px;font-size:13px;color:var(--text-3);}
+  .note{margin-top:14px;background:#ECFDF5;border:1px solid #A7F3D0;border-radius:12px;padding:14px 16px;font-size:13.5px;color:#065F46;}
+  footer{margin-top:44px;text-align:center;color:var(--text-3);font-size:13px;line-height:2;}
+  footer a{color:var(--primary-dark);text-decoration:none;}
+  @media (max-width:520px){ .grid{grid-template-columns:1fr;} header.hero h1{font-size:26px;} }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="logo">拾</div>
+  <h1>拾段</h1>
+  <p class="sub">把人生分成一段一段，认真走过，慢慢变好</p>
+  <div class="badges">
+    <span class="badge">版本 1.0</span>
+    <span class="badge">需要 iOS 16.0 或更高版本</span>
+    <span class="badge">完全离线 · 本地存储</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <h2 class="title">应用简介</h2>
+    <div class="card">
+      <p class="lead">
+        「拾段」是一款以「人生周期」为单位的记录工具。无论是求职备考、康复调整、走出失恋，还是任何一段想认真对待的日子，你都可以为它建立一个周期，每天用心情、标签、文字和照片留下痕迹；阶段结束时封存它，并收到一封属于自己的终章寄语。
+        所有数据仅保存在你的设备本地，无需注册账号、无需联网，安静且私密。
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">核心功能</h2>
+    <div class="grid">
+      <div class="feat"><div class="ic">段</div><h3>人生周期</h3><p>内置求职、康复调整、走出失恋、学习备考模板，也可完全自定义周期。</p></div>
+      <div class="feat"><div class="ic">记</div><h3>每日记录</h3><p>5 种心情、场景化标签、文字与照片，配合每日一句，记录当天状态。</p></div>
+      <div class="feat"><div class="ic">墙</div><h3>个性背景</h3><p>内置主题壁纸，也可从相册选择照片作为周期背景，自动生成照片墙。</p></div>
+      <div class="feat"><div class="ic">板</div><h3>数据看板</h3><p>心情分布、高频标签、记录趋势图表，直观看见自己的变化轨迹。</p></div>
+      <div class="feat"><div class="ic">章</div><h3>封存与寄语</h3><p>阶段结束可选择原因封存周期，封存后只读留存，并查看终章寄语。</p></div>
+      <div class="feat"><div class="ic">锁</div><h3>隐私锁</h3><p>支持 Face ID / Touch ID 解锁，生物校验仅在本机完成，保护私人记录。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">快速上手</h2>
+    <div class="card">
+      <ol class="steps">
+        <li>首页点击「开始记录 / ＋」，选择一个周期模板或自定义，建立你的第一个周期。</li>
+        <li>进入周期详情，点击「记录」，选择今日心情、标签，可补充文字与照片后保存。</li>
+        <li>坚持每日记录，累计 7 / 30 / 180 / 365 天会解锁里程碑彩蛋。</li>
+        <li>在「看板」中查看心情分布与高频标签等统计。</li>
+        <li>阶段结束时，于详情页右上角「更多」中选择「封存此周期」并填写原因。</li>
+        <li>可在「设置」中开启 Face ID / Touch ID 隐私锁。</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="title">常见问题 FAQ</h2>
+
+    <details>
+      <summary>数据保存在哪里？使用需要联网吗？</summary>
+      <div class="ans">「拾段」<strong>不连接任何服务器、不需要注册账号，也不联网</strong>。你的周期、记录、文字和照片全部只保存在当前设备本地，离线也能正常使用。正因如此，卸载应用会清除全部数据，且不会自动云端同步，更换设备前请自行截图留存。</div>
+    </details>
+
+    <details>
+      <summary>免费版和 VIP 有什么区别？会自动续费吗？</summary>
+      <div class="ans">免费版可创建 <strong>1 个周期</strong>，不包含数据看板；VIP 为<strong>一次性购买、永久解锁</strong>的非消耗型项目，解锁后可无限创建周期并使用全部数据看板。<strong>没有订阅、没有到期时间、不会自动续费</strong>。</div>
+    </details>
+
+    <details>
+      <summary>换了手机或重装应用，数据还在吗？</summary>
+      <div class="ans">数据仅存储于本机，不会自动同步到新设备。删除应用或恢复出厂设置后，本地记录将被清除且无法找回，请提前自行备份重要内容（如截图或保存终章卡片到相册）。</div>
+    </details>
+
+    <details>
+      <summary>换设备 / 重装后如何恢复已购买的 VIP？</summary>
+      <div class="ans">进入「设置 → VIP 会员 → 恢复购买」，使用<strong>当初购买时的同一个 Apple ID</strong> 登录即可恢复，无需再次付费。VIP 为非消耗型商品，一次购买终身有效。</div>
+    </details>
+
+    <details>
+      <summary>误删了周期或某条记录，能找回吗？</summary>
+      <div class="ans">删除前会弹出二次确认。由于数据仅保存在本地且没有云端备份，<strong>确认删除后无法恢复</strong>，请谨慎操作。</div>
+    </details>
+
+    <details>
+      <summary>如何开启 Face ID / Touch ID 锁屏？</summary>
+      <div class="ans">在「设置」中打开面容 / 触控锁定开关即可。解锁校验由 iOS 系统在本机完成，应用<strong>不会获取、保存或上传你的生物特征信息</strong>。</div>
+    </details>
+
+    <details>
+      <summary>给记录选照片时，为什么不需要授权访问整个相册？</summary>
+      <div class="ans">应用使用 iOS 的系统照片选择器（PHPicker），你只能、应用也只会读取<strong>你主动选中的那一张</strong>，应用不会扫描或遍历你的整个相册。把终章卡片保存到相册时，系统会就「写入相册」单独征求你的同意。</div>
+    </details>
+
+    <details>
+      <summary>封存周期后还能继续编辑吗？</summary>
+      <div class="ans">封存代表这一阶段已经结束，封存后的周期将变为<strong>只读</strong>，不能再新增或修改记录，但可以随时回看，并查看为这段旅程生成的终章寄语。</div>
+    </details>
+
+    <details>
+      <summary>内购被误扣费，如何申请退款？</summary>
+      <div class="ans">应用内购买由 Apple App Store 统一处理，开发者无法直接操作退款。请使用购买时的 Apple ID 访问 <strong>reportaproblem.apple.com</strong>，按提示向 Apple 申请退款或查看订单。</div>
+    </details>
+
+    <details>
+      <summary>支持哪些设备和系统？</summary>
+      <div class="ans">支持运行 <strong>iOS 16.0 及以上</strong>系统的 iPhone，针对竖屏使用做了适配。</div>
+    </details>
+  </section>
+
+  <section>
+    <h2 class="title">联系我们</h2>
+    <div class="card contact">
+      <p class="lead">如果以上内容没有解决你的问题，或有任何建议，欢迎通过邮件联系，我们通常会在 1–2 个工作日内回复。</p>
+      <a class="mail-btn" href="mailto:support@example.com?subject=%E3%80%8C%E6%8B%BE%E6%AE%B5%E3%80%8D%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81">发送邮件联系客服</a>
+      <p class="hint">联系邮箱：support@example.com ｜ 邮件中可附上设备型号、iOS 版本与问题截图，以便更快定位。</p>
+      <div class="note">小提示：本应用完全离线运行，绝大多数异常可先尝试「重启应用」；若某个周期数据显示异常，可在设置中切换页面后重新进入，本地数据不会因此丢失。</div>
+    </div>
+  </section>
+
+  <footer>
+    <a href="privacy.html">隐私政策</a> ｜ © 2026 拾段 Shiduan. All rights reserved.<br>
+    本页最后更新：2026 年 9 月 15 日
+  </footer>
+
+</div>
+</body>
+</html>
